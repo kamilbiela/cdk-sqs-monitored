@@ -11,6 +11,12 @@ Creates:
     
 Alarms are configured to be sent as fast as possible. Note that SQS report values to CloudWatch every 5 mins.
 
+Installation
+------------
+```bash
+npm install --save cdk-sqs-monitored
+```
+
 Usage
 -----
 
@@ -18,7 +24,6 @@ Minimal config:
 
 ```js
 import * as cdk from '@aws-cdk/core';
-import * as sqs from '@aws-cdk/aws-sqs';
 import * as lib from 'cdk-sqs-monitored';
 
 const app = new cdk.App();
