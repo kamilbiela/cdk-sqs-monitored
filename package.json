@@ -4,6 +4,7 @@
   "author": "Kamil Biela <kamil.biela@gmail.com>",
   "version": "0.1.0",
   "main": "lib/index.js",
+  "license": "MIT",
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc",
