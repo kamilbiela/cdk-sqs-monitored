@@ -5,7 +5,6 @@ import * as cw from '@aws-cdk/aws-cloudwatch';
 import * as cwactions from '@aws-cdk/aws-cloudwatch-actions';
 import * as snssubs from '@aws-cdk/aws-sns-subscriptions';
 
-
 export interface MonitoredQueueProps {
   queueSettings: Omit<sqs.QueueProps, 'deadLetterQueue'>,
   maxReceiveCount?: number;
@@ -14,22 +13,22 @@ export interface MonitoredQueueProps {
 }
 
 export class MonitoredQueue extends cdk.Construct {
-  /** @returns the Arn of the SQS queue */
+  /** @returns the Arn of the main queue */
   public readonly queueArn: string;
   
-  /** @returns the URL of the SQS queue */
+  /** @returns the URL of the main queue */
   public readonly queueUrl: string;
 
-  /** @returns the name of the SQS queue */
+  /** @returns the name of the main queue */
   public readonly queueName: string;
   
-  /** @returns the Arn of the dead letter SQS queue */
+  /** @returns the Arn of the dead letter queue */
   public readonly deadLetterQueueArn: string;
   
-  /** @returns the URL of the SQS queue */
+  /** @returns the URL of the dead letter queue */
   public readonly deadLetterQueueUrl: string;
   
-  /** @returns the name of the SQS queue */
+  /** @returns the name of the dead letter queue */
   public readonly deadLetterQueueName: string;
 
   constructor(scope: cdk.Construct, id: string, props: MonitoredQueueProps) {
