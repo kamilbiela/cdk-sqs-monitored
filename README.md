@@ -19,7 +19,7 @@ Minimal config:
 ```js
 import * as cdk from '@aws-cdk/core';
 import * as sqs from '@aws-cdk/aws-sqs';
-import * as lib from 'kamilbiela/cdk-sqs-monitored';
+import * as lib from 'cdk-sqs-monitored';
 
 const app = new cdk.App();
 

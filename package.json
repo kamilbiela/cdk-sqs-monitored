@@ -1,5 +1,5 @@
 {
-  "name": "@kamilbiela/cdk-sqs-monitored",
+  "name": "cdk-sqs-monitored",
   "description": "AWS CDK SQS Construct with alarms and dead letter queue",
   "author": "Kamil Biela <kamil.biela@gmail.com>",
   "version": "1.0.0",
