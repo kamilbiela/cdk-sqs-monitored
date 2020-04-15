@@ -17,7 +17,8 @@
   "scripts": {
     "build": "jsii",
     "build:watch": "jsii -w",
-    "package": "jsii-pacmak"
+    "package": "jsii-pacmak",
+    "test": "jest"
   },
   "jsii": {
     "outdir": "dist",
