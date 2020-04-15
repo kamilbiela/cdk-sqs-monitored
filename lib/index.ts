@@ -6,10 +6,26 @@ import * as cwactions from '@aws-cdk/aws-cloudwatch-actions';
 import * as snssubs from '@aws-cdk/aws-sns-subscriptions';
 
 export interface MonitoredQueueProps {
-  queueSettings: Omit<sqs.QueueProps, 'deadLetterQueue'>,
-  maxReceiveCount?: number;
-  alarmWhenMessageOlderThanSeconds: number;
-  alarmEmail: string;
+  /**
+   * Queue settings as in sqs.QueueProps, deadLetterQueue property is ignored
+   */
+  readonly queueSettings: sqs.QueueProps;
+
+  /**
+   * Max receive count of message after which it's moved to dead letter queue
+   * @default 3
+   */
+  readonly maxReceiveCount?: number;
+
+  /**
+   * Issue alarm when message is older than X seconds in queue
+   */
+  readonly alarmWhenMessageOlderThanSeconds: number;
+
+  /**
+   * Alarm to which send CloudWatch alarms/ok state changes
+   */
+  readonly alarmEmail: string;
 }
 
 export class MonitoredQueue extends cdk.Construct {
