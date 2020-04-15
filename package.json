@@ -6,7 +6,7 @@
     "email": "kamil.biela@gmail.com",
     "url": "https://kamilbiela.github.io"
   },
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "lib/index.js",
   "license": "MIT",
   "types": "lib/index.d.ts",
