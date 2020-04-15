@@ -1,26 +1,61 @@
 {
   "name": "cdk-sqs-monitored",
   "description": "AWS CDK SQS Construct with alarms and dead letter queue",
-  "author": "Kamil Biela <kamil.biela@gmail.com>",
+  "author": {
+    "name": "Kamil Biela",
+    "email": "kamil.biela@gmail.com",
+    "url": "https://kamilbiela.github.io"
+  },
   "version": "1.0.0",
   "main": "lib/index.js",
   "license": "MIT",
   "types": "lib/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kamilbiela/cdk-sqs-monitored.git"
+  },
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc -w",
-    "test": "jest"
+    "build": "jsii",
+    "build:watch": "jsii -w",
+    "package": "jsii-pacmak"
+  },
+  "jsii": {
+    "outdir": "dist",
+    "targets": {
+      "python": {
+        "distName": "cdk-sqs-monitored",
+        "module": "cdk_sqs_monitored"
+      },
+      "java": {
+        "package": "com.github.kamilbiela.sqsmonitored",
+        "maven": {
+          "groupId": "com.github.kamilbiela",
+          "artifactId": "cdk-sqs-monitored"
+        }
+      },
+      "dotnet": {
+        "namespace": "Kamilbiela.CdkSqsMonitored",
+        "packageId": "Kamilbiela.CdkSqsMonitoredPackage",
+        "signAssembly": false
+      }
+    }
   },
   "devDependencies": {
     "@aws-cdk/assert": "1.32.0",
     "@types/jest": "^24.0.22",
     "@types/node": "10.17.5",
     "jest": "^24.9.0",
+    "jsii": "^1.2.0",
+    "jsii-pacmak": "^1.2.0",
     "ts-jest": "^24.1.0",
     "typescript": "~3.7.2"
   },
   "peerDependencies": {
-    "@aws-cdk/core": "1.31.0"
+    "@aws-cdk/core": "1.32.0",
+    "@aws-cdk/aws-cloudwatch-actions": "1.32.0",
+    "@aws-cdk/aws-sns": "1.32.0",
+    "@aws-cdk/aws-sns-subscriptions": "1.32.0",
+    "@aws-cdk/aws-sqs": "1.32.0"
   },
   "dependencies": {
     "@aws-cdk/aws-cloudwatch-actions": "1.32.0",
