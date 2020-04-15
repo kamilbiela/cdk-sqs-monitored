@@ -7,9 +7,9 @@ import * as snssubs from '@aws-cdk/aws-sns-subscriptions';
 
 export interface MonitoredQueueProps {
   /**
-   * Queue settings, except deadLetterQueue property
+   * Queue settings as in sqs.QueueProps, deadLetterQueue property is ignored
    */
-  readonly queueSettings: Omit<sqs.QueueProps, 'deadLetterQueue'>,
+  readonly queueSettings: sqs.QueueProps;
 
   /**
    * Max receive count of message after which it's moved to dead letter queue
