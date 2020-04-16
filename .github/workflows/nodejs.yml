@@ -34,6 +34,7 @@ jobs:
         BUILD_SOURCE: true
         BUILD_PACKAGES: true
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         # PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
         # NUGET_TOKEN: ${{ secrets.NUGET_TOKEN }}
         # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
