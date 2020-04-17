@@ -6,7 +6,7 @@
     "email": "kamil.biela@gmail.com",
     "url": "https://kamilbiela.github.io"
   },
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "lib/index.js",
   "license": "MIT",
   "types": "lib/index.d.ts",
@@ -40,6 +40,17 @@
         "signAssembly": false
       }
     }
+  },
+  "keywords": [
+    "aws",
+    "aws-cdk", 
+    "cdk", 
+    "construct",
+    "sqs"
+  ],
+  "awscdkio": {
+    "twitter": "@kamil_biela",
+    "announce": true
   },
   "devDependencies": {
     "@aws-cdk/assert": "1.32.2",
